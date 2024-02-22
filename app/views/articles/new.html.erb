@@ -1,0 +1,8 @@
+<%= render "banner" %>
+<div class="article offset-3 col-6 align-items-center pt-4">
+  <h2>New Article</h2>
+  <form action="/articles" method="post">
+    <%= render "form", article: @article %>
+  </form>
+  <%= link_to "Back", articles_path(), class: "text-decoration-none" %>
+</div>

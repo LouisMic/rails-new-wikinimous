@@ -1,0 +1,15 @@
+<div class="mb-0">
+  <label for="article_title" class="form-label fw-bold">Title</label>
+  <input type="text" class="form-control" name="article[title]" id="article_title" value=<%= @article.title || "" %>>
+</div>
+<div class="mb-0">
+  <label for="article_content" class="form-label fw-bold">Content</label>
+  <textarea name="article[content]" id="article_content" class="form-control" rows="10" value=><%= @article.content || "" %></textarea>
+</div>
+<div class="mb-0">
+  <% if @article.new_record?() %>
+    <input type="submit" class="btn btn-light" name="commit" value="Create Article" data-disable-with="Create Article">
+  <% else %>
+    <input type="submit" class="btn btn-light" name="commit" value="Edit Article" data-disable-with="Edit Article">
+  <% end %>
+</div>

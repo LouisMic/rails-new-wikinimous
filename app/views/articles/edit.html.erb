@@ -1,0 +1,6 @@
+<%= render "banner" %>
+<div class="article offset-3 col-6 align-items-center pt-4">
+  <h2>Editing article</h2>
+  <%= render "form", article: @article %>
+  <%= link_to "Back", articles_path(), class: "text-decoration-none" %>
+</div>
